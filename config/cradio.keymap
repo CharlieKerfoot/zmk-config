@@ -6,18 +6,6 @@
 #include <dt-bindings/zmk/pointing.h>
 
 / {
-
-    behaviors {
-        lm: layer_mod {
-            compatible = "zmk,behavior-hold-tap";
-            #binding-cells = <2>;
-            flavor = "balanced";
-            tapping-term-ms = <200>;
-            bindings = <&to>, <&kp>;
-            display-name = "Layer-Mod";
-        };
-    };
-
     keymap {
         compatible = "zmk,keymap";
 
@@ -31,9 +19,9 @@
            &mt LCTRL A &mt LALT S  &kp D      &kp F     &kp G          &kp H       &kp J      &kp K      &kp L     &kp BSPC
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│  Z       │  X       │  C       │  V       │  B       │   │  N       │  M       │ , <      │ . >      │          │
-            &kp Z      &kp X      &kp C      &kp V      &kp B          &kp N      &kp M      &kp COMMA  &kp DOT    &kp ESC
+            &kp Z      &kp X      &kp C      &kp V      &kp B          &kp N      &kp M      &kp COMMA  &kp DOT    &mt LCMD ESC
         //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
-                                            &kp LSHIFT &lt 1 ENTER    &lm 2 LCMD  &kp SPACE
+                                            &kp LSHIFT &lt 1 ENTER       &to 2    &kp SPACE
         //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
             >;
         };
@@ -50,7 +38,7 @@
         //│ +        │  7       │  8       │  9       │  0       │   │          │          │          │          │          │
             &kp PLUS   &kp N7     &kp N8     &kp N9     &kp N0         &kp EQUAL  &kp F9     &kp F10    &kp F11     &kp F12
         //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
-                                             &none     &trans           &kp TAB    &kp FSLH
+                                            &kp LSHIFT  &trans         &kp TAB    &kp FSLH
         //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
             >;
         };
