@@ -13,13 +13,14 @@
             #binding-cells = <2>;
             flavor = "balanced";
             tapping-term-ms = <200>;
-            bindings = <&tog>, <&kp>;
+            bindings = <&to>, <&kp>;
             display-name = "Layer-Mod";
         };
     };
 
     keymap {
         compatible = "zmk,keymap";
+
         default_layer {
             bindings = <
         //╭──────────┬──────────┬──────────┬──────────┬──────────╮   ╭──────────┬──────────┬──────────┬──────────┬──────────╮
@@ -58,7 +59,7 @@
             bindings = <
         //╭──────────┬──────────┬──────────┬──────────┬──────────╮   ╭──────────┬──────────┬──────────┬──────────┬──────────╮
         //│          │          │  {       │  }       │  ~       │   │    [     │    ]     │          │          │          │
-          &bootloader &sys_reset  &kp LBRC   &kp RBRC  &kp TILDE      &kp LBKT   &kp RBKT &studio_unlock &sys_reset &bootloader
+          &bootloader &sys_reset  &kp LBRC   &kp RBRC  &kp TILDE      &kp LBKT   &kp RBKT     &none    &sys_reset &bootloader
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│  !       │  @       │  #       │  $       │  `       │   │  *       │  -       │  =       │  \       │  |       │
             &kp EXCL   &kp AT     &kp HASH   &kp DLLR   &kp GRAVE      &kp ASTRK  &kp MINUS  &kp EQUAL  &kp BSLH   &kp PIPE
@@ -66,7 +67,7 @@
         //│       &  │      _   │      +   │     ^    │  %       │   │          │          │          │          │          │
             &kp AMPS  &kp UNDER   &kp PLUS   &kp CARET  &kp PRCNT      &kp LEFT   &kp DOWN   &kp UP   &kp RIGHT    &kp K_PWR
         //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
-                                             &tog 0    &lt 1 ENTER      &tog 3     &kp ESC
+                                             &to  0    &lt 1 ENTER      &to 3     &kp ESC
         //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
             >;
         };
@@ -75,15 +76,15 @@
             bindings = <
         //╭──────────┬──────────┬──────────┬──────────┬──────────╮   ╭──────────┬──────────┬──────────┬──────────┬──────────╮
         //│          │          │          │          │          │   │          │          │          │          │          │
-            &none     &mkp LCLK &msc SCRL_UP &mkp RCLK   &none         &none    &mkp LCLK  &mmv MOVE_UP &mkp RCLK   &none
+            &none     &mkp LCLK &msc SCRL_DOWN &mkp RCLK &none         &none    &mkp LCLK  &mmv MOVE_UP &mkp RCLK   &none
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│          │          │  #       │  $       │  %       │   │  *       │  -       │          │          │          │
-           &none &msc SCRL_LEFT &msc SCRL_DOWN &msc SCRL_RIGHT &none    &none &mmv MOVE_LEFT &mmv MOVE_DOWN &mmv MOVE_RIGHT &none
+           &none &msc SCRL_LEFT &msc SCRL_UP &msc SCRL_RIGHT &none    &none &mmv MOVE_LEFT &mmv MOVE_DOWN &mmv MOVE_RIGHT &none
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│          │          │          │          │          │   │  &       │  _       │          │          │          │
             &none       &none      &none      &none      &none          &none      &none      &none      &none      &none
         //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
-                                             &none      &tog 0         &tog 2     &none
+                                             &none      &to 0         &to 2     &none
         //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
             >;
         };
