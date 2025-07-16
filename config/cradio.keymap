@@ -29,14 +29,14 @@
         num_layer {
             bindings = <
         //╭──────────┬──────────┬──────────┬──────────┬──────────╮   ╭──────────┬──────────┬──────────┬──────────┬──────────╮
-        //│ (        │  1       │  2       │  3       │          │   │      '   │          │          │          │  :       │
-            &kp LPAR   &kp N1     &kp N2     &kp N3     &kp F1         &kp SQT   &kp F3     &kp F4      &kp F5     &kp COLON
+        //│ (        │  1       │  2       │  3       │          │   │      '   │          │          │          │          │
+            &kp LPAR   &kp N1     &kp N2     &kp N3     &kp F1         &kp SQT   &kp F3     &kp F4      &kp F5     &kp F12
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
-        //│ )        │  4       │  5       │  6       │          │   │      "   │          │          │          │  ;       │
-            &kp RPAR   &kp N4     &kp N5     &kp N6     &kp F2         &kp DQT   &kp F6      &kp F7     &kp F8      &kp SEMI
+        //│ )        │  4       │  5       │  6       │          │   │      "   │          │          │          │  :       │
+            &kp RPAR   &kp N4     &kp N5     &kp N6     &kp F2         &kp DQT   &kp F6      &kp F7     &kp F8      &kp COLON
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
-        //│ +        │  7       │  8       │  9       │  0       │   │          │          │          │          │          │
-            &kp PLUS   &kp N7     &kp N8     &kp N9     &kp N0         &kp EQUAL  &kp F9     &kp F10    &kp F11     &kp F12
+        //│ +        │  7       │  8       │  9       │  0       │   │          │          │          │          │  ;       │
+            &kp PLUS   &kp N7     &kp N8     &kp N9     &kp N0         &kp EQUAL  &kp F9     &kp F10    &kp F11     &mt LCMD SEMI
         //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
                                             &kp LSHIFT  &trans         &kp TAB    &kp FSLH
         //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
@@ -47,13 +47,13 @@
             bindings = <
         //╭──────────┬──────────┬──────────┬──────────┬──────────╮   ╭──────────┬──────────┬──────────┬──────────┬──────────╮
         //│          │          │  {       │  }       │  ~       │   │    [     │    ]     │          │          │          │
-          &bootloader &sys_reset  &kp LBRC   &kp RBRC  &kp TILDE      &kp LBKT   &kp RBKT     &none    &sys_reset &bootloader
+          &bootloader &sys_reset  &kp LBRC   &kp RBRC  &kp TILDE      &kp LBKT   &kp RBKT    &kp K_PWR  &sys_reset &bootloader
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│  !       │  @       │  #       │  $       │  `       │   │  *       │  -       │  =       │  \       │  |       │
             &kp EXCL   &kp AT     &kp HASH   &kp DLLR   &kp GRAVE      &kp ASTRK  &kp MINUS  &kp EQUAL  &kp BSLH   &kp PIPE
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│       &  │      _   │      +   │     ^    │  %       │   │          │          │          │          │          │
-            &kp AMPS  &kp UNDER   &kp PLUS   &kp CARET  &kp PRCNT      &kp LEFT   &kp DOWN   &kp UP   &kp RIGHT    &kp K_PWR
+            &kp AMPS  &kp UNDER   &kp PLUS   &kp CARET  &kp PRCNT      &kp LEFT   &kp DOWN   &kp UP   &kp RIGHT    &kp LCMD
         //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
                                              &to  0    &lt 1 ENTER      &to 3     &kp ESC
         //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
